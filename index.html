@@ -41,7 +41,7 @@
             <ul class="header-nav">
               <li><a>Главная</a></li>
               <li><a href="#">Компания</a></li>
-              <li><a href="#">Каталог</a></li>
+              <li><a href="catalog.htlm">Каталог</a></li>
               <li><a href="#">Новости</a></li>
               <li><a href="#">Спецпредложения</a></li>
               <li><a href="#">Доставка</a></li>
@@ -198,6 +198,7 @@
               <img src="img/map.jpg" width="300" height="158" alt="Карта Google">
             </a>
             <a href="#" class="btn-red btn-cont">Заблудились? НапиШИТЕ НАМ!</a>
+
           </div>
         </section>
       </main>
@@ -231,9 +232,9 @@
             <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
           </div>
           <ul class="footer-social">
-            <li><a class="social-icon" href="#" title="Группа Техномарт в Вконтакте" aria-label="Группа Техномарт в Вконтакте"><img src="img/icon-vk.svg" width="26" height="15" alt="Группа Техномарт в Вконтакте"></a></li>
-            <li><a class="social-icon" href="#" title="Группа Техномарт в Фейсбуке" aria-label="Группа Техномарт в Фейсбуке"><img src="img/icon-fb.svg" width="12" height="22" alt="Группа Техномарт в Фейсбуке"></a></li>
-            <li><a class="social-icon" href="#" title="Группа Техномарт в Инстаграм" aria-label="Группа Техномарт в Инстаграм"><img src="img/icon-insta.svg" width="21" height="21" alt="Группа Техномарт в Инстаграм"></a></li>
+            <li><a class="social-icon" href="https://vk.com" title="Группа Техномарт в Вконтакте" aria-label="Группа Техномарт в Вконтакте"><img src="img/icon-vk.svg" width="26" height="15" alt="Группа Техномарт в Вконтакте"></a></li>
+            <li><a class="social-icon" href="https://www.facebook.com" title="Группа Техномарт в Фейсбуке" aria-label="Группа Техномарт в Фейсбуке"><img src="img/icon-fb.svg" width="12" height="22" alt="Группа Техномарт в Фейсбуке"></a></li>
+            <li><a class="social-icon" href="https://www.instagram.com" title="Группа Техномарт в Инстаграм" aria-label="Группа Техномарт в Инстаграм"><img src="img/icon-insta.svg" width="21" height="21" alt="Группа Техномарт в Инстаграм"></a></li>
           </ul>
         </div>
         <div class="communication">
@@ -247,6 +248,31 @@
           </div>
         </div>
       </footer>
+      <section class="window-map">
+        <h2 class="visually-hidden">Карта с местом расположения магазина</h2>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru" width="640" height="480"></iframe>
+        <button class="window-close" type="button" aria-label="Закрыть окно сообщения">X</button>
+      </section>
+      <section class="window-message">
+        <h2 class="visually-hidden">Написать сообщение в компанию</h2>
+        <form class="message-form" action="https://echo.technomart.ru" method="post">
+          <p>
+            <label for="user-name">Ваше имя:</label>
+            <input id="user-name" type="text" name="your-name" placeholder="Имя Фамилия">
+          </p>
+          <p>
+            <label for="user-email">Ваш e-mail:</label>
+            <input id="user-email" type="email" name="your-user" placeholder="email@example.com">
+          </p>
+          <p>
+            <label for="letter-text">Текст письма:</label>
+            <textarea id="letter-text" name="your-letter" placeholder="В свободной форме"></textarea>
+          </p>
+          <div class="button-row">
+            <button class="btn-red btn-send" type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
     </div>
   </body>
 </html>
