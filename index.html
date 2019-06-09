@@ -28,7 +28,7 @@
         <div class="block-gray">
           <div class="container">
             <div class="header-center">
-              <h1 class="center-text">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+              <h1 class="center-text">Интернет-магазин строительных материалов &nbsp;&nbsp;&nbsp; и инструментов для ремонта</h1>
               <div class="header-contacts">
                 <h2 class="visually-hidden">Контакная информация</h2>
                 <div class="contact-info">
@@ -106,7 +106,7 @@
                     <label class="right-switch" for="btn-2"></label>
                   </div>
                   <label class="arrow-left" for="btn-1">&lt;</label>
-                  <label class="arrow-right"for="btn-2">&gt;</label>
+                  <label class="arrow-right" for="btn-2">&gt;</label>
                 </article>
                 <div class="catalog discount">
                   <h3>Скидки 50%</h3>
@@ -135,7 +135,7 @@
                 <article class="drill-catalog">
                   <div class="drill">
                     <div class="actions">
-                      <a href="#" class="buy">Купить</a>
+                      <a href="#" class="buy js-buy">Купить</a>
                       <a href="#" class="bookmark">В закладки</a>
                     </div>
                     <a href="#"><img class="drill-img" src="img/perforator_1.jpg" width="218" height="170" alt="Изображение перфоратора"></a>
@@ -147,7 +147,7 @@
                 <article class="drill-catalog">
                   <div class="drill">
                     <div class="actions">
-                      <a href="#" class="buy">Купить</a>
+                      <a href="#" class="buy js-buy">Купить</a>
                       <a href="#" class="bookmark">В закладки</a>
                     </div>
                     <a href="#"><img class="drill-img" src="img/perforator_2.jpg" width="218" height="170" alt="Изображение перфоратора"></a>
@@ -159,7 +159,7 @@
                 <article class="drill-catalog">
                   <div class="drill">
                     <div class="actions">
-                      <a href="#" class="buy">Купить</a>
+                      <a href="#" class="buy js-buy">Купить</a>
                       <a href="#" class="bookmark">В закладки</a>
                     </div>
                     <a href="#"><img class="drill-img" src="img/perforator_3.jpg" width="218" height="170" alt="Изображение перфоратора"></a>
@@ -171,7 +171,7 @@
                 <article class="drill-catalog new">
                   <div class="drill">
                     <div class="actions">
-                      <a href="#" class="buy">Купить</a>
+                      <a href="#" class="buy js-buy">Купить</a>
                       <a href="#" class="bookmark">В закладки</a>
                     </div>
                     <a href="#"><img class="drill-img" src="img/perforator_2.jpg" width="218" height="170" alt="Изображение перфоратора"></a>
@@ -201,8 +201,8 @@
           <div class="container">
             <section class="services">
               <h2 class="title-services">Сервисы</h2>
-              <p class="text-services">Хороший интернет-магазин отличается от плохого не только ценами! <br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-              <ul class="blok-services">
+              <p class="text-services">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+              <div class="blok-services">
                 <div class="service-label">
                   <label for="btn-delivery">Доставка</label>
                   <label for="btn-guarantee">Гарантия</label>
@@ -226,7 +226,7 @@
                     <a class="btn-red" href="#">Отправить заявку</a>
                   </div>
                 </div>
-              </ul>
+              </div>
             </section>
           </div>
         </div>
@@ -245,14 +245,50 @@
           </div>
           <div class="contacts-info">
             <h2 class="page-title">КОНТАКТЫ</h2>
-            <p class="contacts-text">Вы можете забрать товар сами, <br> заехав в наш офис:</p>
-            <a class="map" href="#">
+            <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис:</p>
+            <a class="map js-map" href="#">
               <img src="img/map.jpg" width="300" height="158" alt="Карта Google">
             </a>
-            <a href="#" class="btn-red btn-cont">Заблудились? НапиШИТЕ НАМ!</a>
+            <a href="#" class="btn-red btn-cont js-contacts">Заблудились? НапиШИТЕ НАМ!</a>
           </div>
         </section>
       </main>
+      <section class="window-basket">
+        <h2 class="visually-hidden">Окно добавления товара в корзину</h2>
+        <span class="icon"><img  src="img/form-1.png" width="66" alt="Действие выполнено успешно"></span>
+        <button class="window-close window-close-buy" type="button" aria-label="Закрыть окно сообщения"></button>
+        <p class="window-text">Товар добавлен в корзину!</p>
+        <div class="button-row">
+          <a href="#" class="btn-red btn-order">Оформить заказ</a>
+          <button class="btn-purchases" type="button">Продолжить покупки</button>
+        </div>
+      </section>
+      <section class="window-map">
+        <h2 class="visually-hidden">Карта с местом расположения магазина</h2>
+        <iframe class="big-map" src="https://www.google.com/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru" width="940" height="480"></iframe>
+        <button class="window-close window-close-map" type="button" aria-label="Закрыть окно сообщения"></button>
+      </section>
+      <section class="window-message">
+        <button class="window-close window-message-close" type="button" aria-label="Закрыть окно сообщения"></button>
+        <h2 class="visually-hidden">Написать сообщение в компанию</h2>
+        <form class="message-form" action="https://echo.technomart.ru" method="post">
+          <div class="window-questionnaire">
+              <label for="login">
+                <span>Ваше имя:</span>
+                <input id="login" type="text" name="login" placeholder="Имя Фамилия">
+              </label>
+              <label for="email">
+                <span>Ваш e-mail:</span>
+                <input id="email" type="text" name="email" placeholder="email@example.com">
+              </label>
+              <span class="letter-text">Текст письма:</span>
+              <textarea id="letter-text" cols="61" rows="6" name="textletter" placeholder="В свободной форме" onfocus="placeholder='';" onblur="placeholder='В свободной форме';"></textarea>    
+          </div>
+          <div class="button-row">
+            <button class="btn-red btn-send" type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
       <footer class="main-footer">
         <div class="footer-top">
           <div class="footer-wrap">
@@ -285,53 +321,27 @@
         <div class="footer-bottom">
           <div class="footer-lower">
             <div class="copyright">
-              <p>© 2010–2019 Компания «Техномарт» <br> Все права защищены</p>
-          </div>
-          <ul class="footer-social">
-            <li><a class="social-icon" href="https://vk.com" title="Группа Техномарт в Вконтакте" aria-label="Группа Техномарт в Вконтакте"><img src="img/icon-vk.svg" width="26" height="15" alt="Группа Техномарт в Вконтакте"></a></li>
-            <li><a class="social-icon" href="https://www.facebook.com" title="Группа Техномарт в Фейсбуке" aria-label="Группа Техномарт в Фейсбуке"><img src="img/icon-fb.svg" width="12" height="22" alt="Группа Техномарт в Фейсбуке"></a></li>
-            <li><a class="social-icon" href="https://www.instagram.com" title="Группа Техномарт в Инстаграм" aria-label="Группа Техномарт в Инстаграм"><img src="img/icon-insta.svg" width="21" height="21" alt="Группа Техномарт в Инстаграм"></a></li>
-          </ul>
-          <div class="communication">
-            <div class="feedback">
-              <p>Обратная связь</p>
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
             </div>
-            <div class="creator">
-              <p>Разработано - </p>
-              <a href="mailto:htmlacademy.ru">htmlacademy.ru</a>
+            <ul class="footer-social">
+              <li><a class="social-icon" href="https://vk.com" title="Группа Техномарт в Вконтакте" aria-label="Группа Техномарт в Вконтакте"><img src="img/icon-vk.svg" width="26" height="15" alt="Группа Техномарт в Вконтакте"></a></li>
+              <li><a class="social-icon" href="https://www.facebook.com" title="Группа Техномарт в Фейсбуке" aria-label="Группа Техномарт в Фейсбуке"><img src="img/icon-fb.svg" width="12" height="22" alt="Группа Техномарт в Фейсбуке"></a></li>
+              <li><a class="social-icon" href="https://www.instagram.com" title="Группа Техномарт в Инстаграм" aria-label="Группа Техномарт в Инстаграм"><img src="img/icon-insta.svg" width="21" height="21" alt="Группа Техномарт в Инстаграм"></a></li>
+            </ul>
+
+            <div class="communication">
+              <div class="feedback">
+                <p>Обратная связь</p>
+                <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </div>
+              <div class="creator">
+                <p>Разработано - </p>
+                <a href="mailto:htmlacademy.ru">htmlacademy.ru</a>
+              </div>
             </div>
           </div>
-        </div>
+        </div>    
       </footer>
-
-      <section class="window-map window-map-show">
-        <h2 class="visually-hidden">Карта с местом расположения магазина</h2>
-        <iframe class="big-map" src="https://www.google.com/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru" width="940" height="480"></iframe>
-        <button class="window-close window-close-map" type="button" aria-label="Закрыть окно сообщения"><img src="img/close.png" width="21" width="21" alt="Закрыть"></button>
-      </section>
-
-      <section class="window-message">
-        <button class="window-close" type="button" aria-label="Закрыть окно сообщения"><img  src="img/close.png" width="21" width="21" alt="Закрыть"></button>
-        <h2 class="visually-hidden">Написать сообщение в компанию</h2>
-        <form class="message-form" action="https://echo.technomart.ru" method="post">
-          <div class="window-questionnaire">
-              <label for="user-name">
-                <span>Ваше имя:</span><br>
-                <input id="user-name" type="text" name="your-name" placeholder="Имя Фамилия">
-              </label>
-              <label for="user-email">
-                <span>Ваш e-mail:</span><br>
-                <input id="user-email" type="text" name="your-user" placeholder="email@example.com">
-              </label>
-              <span class="letter-text">Текст письма:</span>
-              <textarea id="letter-text" cols="61" rows="6" name="your-letter" placeholder="В свободной форме" onfocus="placeholder='';" onblur="placeholder='В свободной форме';"></textarea>
-              </label>     
-          </div>
-          <div class="button-row">
-            <button class="btn-red btn-send" type="submit">Отправить</button>
-          </div>
-        </form>
-      </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

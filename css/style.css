@@ -1,3 +1,67 @@
+ @-webkit-keyframes shake {
+     0%, to {
+         -webkit-transform: translateX(-100%);
+         transform: translateX(-100%) 
+    }
+     10%, 30%, 50%, 70%, 90% {
+         -webkit-transform: translateX(-60%);
+         transform: translateX(-60%) 
+    }
+     20%, 40%, 60%, 80% {
+         -webkit-transform: translateX(40%);
+         transform: translateX(40%) 
+    }
+}
+ @keyframes shake {
+     0%, to {
+         -webkit-transform: translateX(-100%);
+         transform: translateX(-100%) 
+    }
+     10%, 30%, 50%, 70%, 90% {
+         -webkit-transform: translateX(-60%);
+         transform: translateX(-60%) 
+    }
+     20%, 40%, 60%, 80% {
+         -webkit-transform: translateX(20%);
+         transform: translateX(20%) 
+    }
+}
+ @-webkit-keyframes formshow {
+     0% {
+         -webkit-transform: translate(-50%, -70%);
+         transform: translate(-50%, -70%) 
+    }
+     70% {
+         -webkit-transform: translate(-50%, -40%);
+         transform: translate(-50%, -40%) 
+    }
+     90% {
+         -webkit-transform: translate(-50%, -10%);
+         transform: translate(-50%, -10%) 
+    }
+     to {
+         -webkit-transform: translate(-50%, -5%);
+         transform: translate(-50%, -5%) 
+    }
+}
+ @keyframes formshow {
+     0% {
+         -webkit-transform: translate(-50%, -70%);
+         transform: translate(-50%, -70%) 
+    }
+     70% {
+         -webkit-transform: translate(-50%, -40%);
+         transform: translate(-50%, -40%) 
+    }
+     90% {
+         -webkit-transform: translate(-50%, -10%);
+         transform: translate(-50%, -10%) 
+    }
+     to {
+         -webkit-transform: translate(-50%, -5%);
+         transform: translate(-50%, -5%) 
+    }
+}
 html {
      -webkit-box-sizing: border-box;
      box-sizing: border-box;
@@ -19,7 +83,7 @@ html {
      text-decoration: none;
 }
  input[type=text] {
-     width: 85px;
+     width: 95px;
      padding: 8px 2px 10px 8px;
      font-weight: 400;
      font-style: normal;
@@ -238,19 +302,18 @@ html {
      font-size: 16px;
      line-height: 23px;
      font-weight: 400;
-     width: 247px;
      float: left;
      font-family: "Cuprum", "Arial", sans-serif;
-     margin: 0 8px 0 40px;
-     width: 200px;
-     padding: 10px 8px 40px 0;
+     margin: 0 8px 0 35px;
+     width: 210px;
+     padding: 10px 5px 40px 5px;
 }
  .header-tel {
      position: relative;
      width: 190px;
      font-size: 21px;
      line-height: 18px;
-     margin-left: 60px;
+     margin-left: 55px;
      padding: 9px 0 4px 0;
 }
  .header-tel a {
@@ -281,7 +344,7 @@ html {
      font-size: 14px;
      font-weight: 400;
      line-height: 24px;
-     padding: 0 15px 0 70px;
+     padding: 0 15px 0 65px;
      margin: 0;
 }
  .link, .user {
@@ -358,14 +421,14 @@ html {
      padding-bottom: 35px;
      padding-left: 17px;
      margin: 0;
-     margin-top: 7px;
+     margin-top: 5px;
      float: right;
      display: -webkit-box;
      display: -ms-flexbox;
      display: flex;
      -ms-flex-wrap: wrap;
      flex-wrap: wrap;
-     margin-left: 50px;
+     margin-left: 47px;
      padding: 0;
      list-style: none;
      font-size: 16px;
@@ -375,6 +438,9 @@ html {
  .user-navigation li {
      display: inline-block;
 }
+ .user-navigation a {
+     color: #32425c;
+ }
  .registration {
      padding: 12px 25px 14px 25px;
 }
@@ -394,7 +460,6 @@ html {
      font-weight: 400;
      font-style: normal;
      font-size: 16px;
-     color: #32425c;
      background-color: #f2f6f8;
      line-height: 18px;
      cursor: pointer;
@@ -472,6 +537,7 @@ html {
      min-height: 123px;
      line-height: 0;
      font-size: 0;
+     padding: 20px;
      margin: 0 0 20px 20px;
 }
  .catalog h3 {
@@ -481,7 +547,7 @@ html {
      font-weight: 700;
      background: 0 0;
      display: block;
-     margin: 21px 0 0 23px;
+     margin: 0;
 }
  .catalog-img {
      position: absolute;
@@ -527,7 +593,7 @@ html {
      text-align: center;
      width: 135px;
      padding: 10px 0;
-     margin: 12px 0 0 24px;
+     margin: 13px 0 0 5px;
      display: inline-block;
      border-radius: 3px;
      background: rgba(0, 0, 0, .1);
@@ -636,12 +702,6 @@ html {
      line-height: 18px;
      height: 38px;
 }
- .btn-popular {
-     margin: 25px 24px;
-     width: 253px;
-     float: right;
-     margin-left: auto;
-}
  .slider .btn-red {
      display: block;
      width: 195px;
@@ -698,9 +758,16 @@ html {
      background-color: #f9f5f0;
      margin-bottom: 20px;
      width: 940px;
-     display: -webkit-inline-box;
-     display: -ms-inline-flexbox;
-     display: inline-flex;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     padding: 20px 24px 20px 20px;
+     -webkit-box-pack:justify;
+         -ms-flex-pack:justify;
+             justify-content:space-between;
+     -webkit-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
 }
  .text-popular {
      font-family: "Cuprum", "Arial", sans-serif;
@@ -709,8 +776,13 @@ html {
      font-size: 30px;
      line-height: 30px;
      text-transform: uppercase;
-     float: left;
-     margin: 30px 0 29px 28px;
+     margin: 0;
+     padding: 10px 8px 9px 8px;
+}
+ .btn-popular {
+     margin: 0;
+     width: 253px;
+     margin-left: auto;
 }
  .drill-catalog {
      position: relative;
@@ -765,10 +837,6 @@ html {
      height: 176px;
      padding: 44px 0;
      background: #fff;
-}
- .banner {
-     width: 218px;
-     height: 145px;
 }
  .drill-catalog, .banner {
      background-color: #fff;
@@ -886,6 +954,7 @@ html {
      width: 140px;
      height: 37px;
      padding: 9px 30px;
+     margin-left: 6px;
      color: #fff;
      background: #ee3643;
      -ms-flex-item-align: start;
@@ -908,9 +977,9 @@ html {
 }
  .manufacturers a {
      display: inline-block;
-     width: 218px;
-     height: 143px;
-     margin: 0 15px 18px 0;
+     width: 220px;
+     height: 145px;
+     margin: 0 16px 20px 0;
      vertical-align: middle;
      border: 1px solid #e5e5e5;
 }
@@ -940,7 +1009,7 @@ html {
      font-size: 30px;
      text-transform: uppercase;
      color: #000;
-     padding-top: 74px;
+     padding-top: 65px;
      font-weight: 400;
      line-height: 0.8;
      margin: 0 0 29px;
@@ -953,6 +1022,7 @@ html {
      font-style: normal;
      line-height: 24px;
      margin: 0;
+     width: 400px;
 }
  .blok-services {
      position: relative;
@@ -1034,7 +1104,7 @@ html {
  .service-devivery {
      background: url(../img/car.png) no-repeat;
      background-position: 100% 80%;
-     padding-bottom: 115px;
+     padding-bottom: 120px;
      display: none;
 }
  .service-guarantee {
@@ -1136,7 +1206,7 @@ html {
      font-weight: 400;
      font-style: normal;
      line-height: 24px;
-     margin-bottom: 29px;
+     margin: 16px 0 29px 0;
 }
  .contacts-text {
      font-size: 13px;
@@ -1146,6 +1216,7 @@ html {
      font-style: normal;
      line-height: 24px;
      color: #222;
+     width: 200px;
 }
  .line::before {
      content: '';
@@ -1367,18 +1438,6 @@ html {
  .creator {
      margin-left: 35px;
 }
- .window-close {
-     background: transparent;
-     border: none;
-     outline: none;
-     width: 33px;
-     height: 23px;
-     top: 16px;
-     right: 9px;
-     color: #ee3643;
-     float: right;
-     margin: 9px;
-}
  .window-questionnaire {
      padding: 0 10px;
      margin: 43px 50px 0 70px;
@@ -1485,6 +1544,7 @@ html {
      animation: bounce .4s;
 }
  .window-map {
+     display: none;
      width: 940px;
      height: 448px;
 }
@@ -1603,8 +1663,8 @@ html {
      border-radius: 3px;
      position: relative;
      height: 80px;
-     margin: 14px 0 10px;
-     padding: 0 30px;
+     margin: 15px 0 10px;
+     padding: 0 20px 0 30px;
      overflow: hidden;
 }
  .scale {
@@ -1613,7 +1673,7 @@ html {
      background: #d7dcde;
 }
  .bar {
-     width: 87%;
+     width: 85%;
      height: 2px;
      background: #00ca74;
 }
@@ -1623,8 +1683,8 @@ html {
      border: 8px solid #fff;
      top: 30px;
      left: 30px;
-     width: 4px;
-     height: 4px;
+     width: 20px;
+     height: 20px;
      border-radius: 50%;
      cursor: pointer;
 }
@@ -1827,7 +1887,7 @@ html {
      background-color: #f2f6f8;
      color: #000;
      width: 940px;
-     padding: 65px 0 70px;
+     padding: 70px 0 65px 0;
      margin: 0 auto;
 }
  .title-about-drill {
@@ -1979,7 +2039,7 @@ html {
      background: #fff;
 }
  .pages {
-     padding: 20px 0;
+     padding: 19px 0 20px 0;
      margin: 10px 0 40px 0;
 }
  .page {
@@ -2019,4 +2079,46 @@ html {
      color: #000;
      border: 1px solid #e5e5e5;
      border-radius: 5px;
+}
+ .window-show, .window-map-show {
+     position: fixed;
+     top: 5%;
+     left: 50%;
+     z-index: 200;
+     -webkit-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+         transform: translateX(-50%);
+     display: block;
+     -webkit-animation: formshow .3s;
+     animation: formshow .3s 
+}
+ .window-map-show {
+     font-size: 0 
+}
+ .window-close-buy, .window-message-close, .window-close-map {
+     padding: 0;
+     border: none 
+}
+ .window-close-buy::after, .window-close-buy::before, .window-message-close::after, .window-message-close::before, .window-close-map::after, .window-close-map::before {
+     content: '';
+     position: absolute;
+     top: 15px;
+     right: 15px;
+     -webkit-transform: rotate(-45deg);
+     -ms-transform: rotate(-45deg);
+         transform: rotate(-45deg);
+     width: 20px;
+     height: 5px;
+     background: #ee3643;
+     border: none;
+     cursor: pointer 
+}
+ .window-close-buy::after, .window-message-close::after, .window-close-map::after {
+     -webkit-transform: rotate(45deg);
+     -ms-transform: rotate(45deg);
+         transform: rotate(45deg) 
+}
+ .modal-error {
+     -webkit-animation: shake .5s;
+     animation: shake .5s 
 }
