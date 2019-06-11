@@ -1,16 +1,14 @@
 var maplink = document.querySelector(".js-map"),
-
     buylink = document.querySelectorAll(".js-buy"),
-
     map = document.querySelector(".window-map"),
     buy = document.querySelector(".window-basket"),
     closemap = document.querySelector(".window-close-map"),
     closebuy = document.querySelector(".window-close-buy"),
     linkcontacts = document.querySelector(".js-contacts"),
     closecontacts = document.querySelector(".window-message-close"),
-    
     storage = localStorage.getItem("login"),
     contacts = document.querySelector(".window-message");
+
 if (linkcontacts && contacts && closecontacts) {
     var form = contacts.querySelector("form"),
         login = contacts.querySelector("[name=login]"),
@@ -26,6 +24,7 @@ if (linkcontacts && contacts && closecontacts) {
         27 === a.keyCode && contacts.classList.contains("window-show") && (contacts.classList.remove("window-show"), contacts.classList.remove("modal-error"))
     })
 }
+
 for (var i = 0; i < buylink.length; i++) buylink[i].addEventListener("click", function(a) {
     a.preventDefault(), buy.classList.add("window-show")
 });

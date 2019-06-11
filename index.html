@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
       <header class="main-header">
@@ -85,28 +85,30 @@
                   <a class="catalog-btn" href="#">Для стройки</a>
                 </div>
                 <article class="slider-catalog">
-                  <div class="slider-perforator">
-                    <div class="slider">
-                      <h2 class="slider-title">Перфораторы</h2>
-                      <p class="slider-text">Настоящие мужские игрушки</p>
-                      <a class="btn-red" href="#">Открыть каталог</a>
-                    </div>
-                  </div>
-                  <div class="slider-drill">
-                    <div class="slider">
-                      <h2 class="slider-title">Дрели</h2>
-                      <p class="slider-text">Соседям на радость!</p>
-                      <a class="btn-red" href="#">Открыть каталог</a>
-                    </div>
-                  </div>
-                  <input type="radio" id="btn-1" name="switch" checked>
-                  <input type="radio" id="btn-2" name="switch">
+                  <input type="radio" id="btn-1" name="toggle" checked>
+                  <input type="radio" id="btn-2" name="toggle">
                   <div class="switches">
-                    <label class="left-switch" for="btn-1"></label>
-                    <label class="right-switch" for="btn-2"></label>
+                    <label for="btn-1"></label>
+                    <label for="btn-2"></label>
                   </div>
-                  <label class="arrow-left" for="btn-1">&lt;</label>
-                  <label class="arrow-right" for="btn-2">&gt;</label>
+                  <label class="arrow-left" for="btn-1"></label>
+                  <label class="arrow-right" for="btn-2"></label>
+                  <div class="slides">
+                    <div class="slide slider-perforator">
+                      <div class="slider">
+                        <h2 class="slider-title">Перфораторы</h2>
+                        <p class="slider-text">Настоящие мужские игрушки</p>
+                        <a class="btn-red" href="catalog.html">Открыть каталог</a>
+                      </div>
+                    </div>
+                    <div class="slide slider-drill">
+                      <div class="slider">
+                        <h2 class="slider-title">Дрели</h2>
+                        <p class="slider-text">Соседям на радость!</p>
+                        <a class="btn-red" href="catalog-drill.html">Открыть каталог</a>
+                      </div>
+                    </div>
+                  </div>
                 </article>
                 <div class="catalog discount">
                   <h3>Скидки 50%</h3>
@@ -203,14 +205,14 @@
               <h2 class="title-services">Сервисы</h2>
               <p class="text-services">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
               <div class="blok-services">
+                <input type="radio" id="btn-delivery" name="service" checked>
+                <input type="radio" id="btn-guarantee" name="service">
+                <input type="radio" id="btn-loan" name="service">
                 <div class="service-label">
                   <label for="btn-delivery">Доставка</label>
                   <label for="btn-guarantee">Гарантия</label>
                   <label for="btn-loan">Кредит</label>
                 </div>
-                <input type="radio" id="btn-delivery" name="service" checked>
-                <input type="radio" id="btn-guarantee" name="service">
-                <input type="radio" id="btn-loan" name="service">
                 <div class="service-description">
                   <div class="service-btn service-devivery">
                     <h3 class="service-title">Доставка</h3>
@@ -265,7 +267,7 @@
       </section>
       <section class="window-map">
         <h2 class="visually-hidden">Карта с местом расположения магазина</h2>
-        <iframe class="big-map" src="https://www.google.com/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru" width="940" height="480"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1560280163841!5m2!1sru!2sru" width="940" height="448" frameborder="0" style="border:0" allowfullscreen></iframe>
         <button class="window-close window-close-map" type="button" aria-label="Закрыть окно сообщения"></button>
       </section>
       <section class="window-message">
@@ -342,6 +344,6 @@
           </div>
         </div>    
       </footer>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.min.js"></script>
   </body>
 </html>
