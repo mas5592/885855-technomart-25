@@ -419,6 +419,7 @@
  .user {
      position: relative;
      padding: 12px 66px 12px 46px;
+     width: 298px;
 }
  .user:active {
      color: #b2b2b2;
@@ -478,6 +479,7 @@
      float: right;
      position: relative;
      padding-top: 8px;
+     margin-left: 13px;
 }
  .my-orders, .personal-account {
      font-family: "Cuprum", "Arial", sans-serif;
